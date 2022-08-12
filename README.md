@@ -1,27 +1,12 @@
-# AngularBlog
+# 🗒 Simple blog sistem with Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
+The objective of this exercise of the Angular module of the Codehouse Academy bootcamp was to develop a **very simple blog system to understand some of the framework's functions**. For the practice we would not connect to any API, we would use a static, multidimensional data array created in a service to get the information.
 
-## Development server
+The application has four routes:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- **/home**: this is the path to the blog with the list of articles that are in the previously mentioned array.
+- **/new**: in this path we find the form that allows us to add new articles to our blog. The articles have a title, text, an image provided by a URL, a category and a publication date. All the form fields are mandatory and in the image field a validator has been created to check that the path is a JPG or PNG image. In this case, the category selector is filled with an array of categories that will be in its own service.
+- **/post/:idpost**: this view will show the view of each of the articles with all their information.
+- **/category/:category-name**: this view serves as a filter to show only posts of the same category, with the articles of the same category. It has a layout identical to that of the main page and is accessed through the menu, by means of a drop-down with the different options.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+🔗 https://toni-castillo.github.io/angularBlog/
