@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <div class="container">
+    <a class="navbar-brand fw-bold" [routerLink]="['/']">
+      <img src="./assets/images/logo-pepe-viajes.png" alt="Logo de Pepe Viajes" width="30" height="30" class="d-inline-block align-text-top">
+      PEPE VIAJES
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['/home']">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+            Categorías
+          </a>
+          <ul class="dropdown-menu">
+            <!-- El li es la superficie iterable -->
+            <li *ngFor="let category of arrCategories"><a class="dropdown-item" [routerLink]="['/category', (category.title).toLowerCase()]" routerLinkActive="active">{{category.title}}</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" [routerLink]="['/home']">Ver todas las categorías</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['/new']">Nuevo artículo</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+<footer class="container text-center p-2 mt-5 border-top border-danger">
+  <!-- Año en curso; intenté inyectar directamente un script con document.write, pero no imprimía la fecha -->
+  &copy; {{year}} | PEPE VIAJES
+</footer>

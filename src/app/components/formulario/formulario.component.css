@@ -1,0 +1,43 @@
+input.ng-invalid.ng-touched {
+  border-bottom: 3px solid tomato;
+  background-image: url(../../../assets/images/senal-alerta-error.png);
+  background-repeat: no-repeat;
+  background-position: right .75rem center;
+  background-size: 20px;
+}
+
+input#date.ng-invalid.ng-touched {
+  border-bottom: 3px solid tomato;
+  background-image: url(../../../assets/images/senal-alerta-error.png);
+  background-repeat: no-repeat;
+  background-position: center right 3rem;
+  background-size: 20px;
+}
+
+input.ng-valid.ng-touched { 
+  border-bottom: 3px solid lightgreen;
+}
+
+textarea.ng-invalid.ng-touched {
+  border-bottom: 3px solid tomato;
+  background-image: url(../../../assets/images/senal-alerta-error.png);
+  background-repeat: no-repeat;
+  background-position: right .75rem center;
+  background-size: 20px;
+}
+
+textarea.ng-valid.ng-touched { 
+  border-bottom: 3px solid lightgreen;
+}
+
+select.ng-invalid.ng-touched {
+  border-bottom: 3px solid tomato;
+  background-image: url(../../../assets/images/flecha.svg), url(../../../assets/images/senal-alerta-error.png);
+  background-repeat: no-repeat;
+  background-position: right .75rem center,center right 2.25rem;
+  background-size: 16px 12px, 20px;
+}
+
+select.ng-valid.ng-touched { 
+  border-bottom: 3px solid lightgreen;
+}

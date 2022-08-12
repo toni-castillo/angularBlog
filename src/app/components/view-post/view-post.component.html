@@ -1,0 +1,9 @@
+<section class="container mt-5">
+  <div class="card p-4">
+    <h2 class="card-title">{{myPost?.title}}</h2>
+    <h5 class="card-subtitle mb-2 text-muted">{{myPost?.date | date:'d-M-yyyy'}} | {{myPost?.author}} | {{myPost?.category}} | {{myPost?.id}}</h5>
+    <div class="card-body">
+      {{myPost?.body}}
+    </div>
+  </div>
+</section>

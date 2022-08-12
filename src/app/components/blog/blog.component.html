@@ -1,0 +1,19 @@
+<section class="container mt-4 min-height">
+  <h2 class="text-danger">El blog de Pepe Viajes 📝</h2>
+  <h5 *ngIf="myCategory">Artículos de la categoría '{{(myCategory).charAt(0).toUpperCase() + myCategory.slice(1)}}'</h5>
+  <div class="row g-4 mt-2">
+    <!-- Este article es la superficie iterable -->
+    <article class="col-12 col-md-4" *ngFor="let post of arrPostsBlog">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">{{post.title}}</h4>
+          <h6 class="card-subtitle mb-2 text-muted">{{post.date | date:'d-M-yyyy'}} | {{post.author}} | {{post.category}}</h6>
+          <p class="card-text">
+            {{post.body | slice:0:150}}...
+          </p>
+          <a [routerLink]="['/post', post.id]" class="card-link">Leer más</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
