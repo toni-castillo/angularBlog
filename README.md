@@ -1,4 +1,4 @@
-# 🗒 Simple blog sistem with Angular
+# 🗒 Simple blog system with Angular
 
 The objective of this exercise of the Angular module of the Codehouse Academy bootcamp was to develop a **very simple blog system to understand some of the framework's functions**. For the practice we would not connect to any API, we would use a static, multidimensional data array created in a service to get the information.
 
